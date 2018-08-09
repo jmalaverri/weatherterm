@@ -30,11 +30,9 @@ def _import_parsers(parserfiles):
         _classes.update({k: v for k, v in inspect.getmembers(v)
                          if inspect.isclass(v) and m.match(k)})
 
-
     return _classes
 
 
-    def load(dirname):
-    	parserfiles = _get_parser_list(dirname)
-    	return _import_parsers(parserfiles)
-    
+def load(dirname):
+    parserfiles = _get_parser_list(dirname)
+    return _import_parsers(parserfiles)
