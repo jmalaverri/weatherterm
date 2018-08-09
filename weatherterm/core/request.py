@@ -10,7 +10,7 @@ class Request:
 		self._base_url = base_url
 		self._driver = webdriver.PhantomJS(self._phantomjs_path)
 
-
+	#formats the URL, adding the forecast option and the area.
 	def fetch_data(self, forecast, area):
 		url = self._base_url.format(forecast=forecast, area=area)
 		self._driver.get(url)
