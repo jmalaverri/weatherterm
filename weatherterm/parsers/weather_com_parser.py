@@ -1,13 +1,12 @@
 from weatherterm.core import ForecastType
 
 class WeatherComParser:
-
 	def __init__(self):
 		self._forecast = {
 			ForecastType.TODAY: self._today_forecast,
 			ForecastType.FIVEDAYS: self._five_and_ten_days_forecast,
 			ForecastType.TENDAYS: self._five_and_ten_days_forecast,
-			ForecastType.WEEKEND: self._weekend_forecast,
+			ForecastType.WEEKEND: self._weekend_forecast
 		}
 
 	def _today_forecast(self, args):
@@ -16,7 +15,7 @@ class WeatherComParser:
 	def _five_and_ten_days_forecast(self, args):
 		raise NotImplementedError()
 
-	def _weekend_forecast(self, args)
+	def _weekend_forecast(self, args):
 		raise NotImplementedError()
 
 	def run(self, args):
