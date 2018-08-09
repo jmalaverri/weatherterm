@@ -94,7 +94,7 @@ class WeatherComParser:
 		high_temp, low_temp = temp_info.groups()
 
 		side = container.find('div', class_='today_nowcard-sidecar')
-		humidity, wind = self._get_additional_info(side)
+		wind, humidity = self._get_additional_info(side)
 
 		curr_temp = self._clear_str_number(weatherinfo['today_nowcard-temp'])
 
